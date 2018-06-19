@@ -1,0 +1,649 @@
+* {
+    box-sizing : border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body, html{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+}
+
+div{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+
+.container-wide {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+.container-medium {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.container-slim {
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img-res {
+    width: 100%;
+    height: auto;
+}
+
+.row, .img-row {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.col-1  {
+    text-align: center;
+    width : 8.333333%;
+}
+.col-2  {
+    text-align: center;
+    width : 16.66666%;
+}
+.col-3  {
+    text-align: center;
+    width : 25%;
+}
+.col-4  {
+    text-align: center;
+    width : 33.33333%;
+}
+.col-5  {
+    text-align: center;
+    width : 41.66666%;
+}
+.col-6  {
+    text-align: center;
+    width : 50%;
+}
+.col-7  {
+    text-align: center;
+    width : 58.33333%;
+}
+.col-8  {
+    text-align: center;
+    width : 66.66666%;
+}
+.col-9  {
+    text-align: center;
+    width : 75%;
+}
+.col-10 {
+    text-align: center;
+    width : 83.33333%;
+}
+.col-11 {
+    text-align: center;
+    width : 91.66666%;
+}
+.col-12 {
+    text-align: center;
+    width : 100%;
+}
+
+
+
+/* header like jumbotron */
+.bold-header {
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 15px;
+}
+
+.side-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    overflow-x: hidden;
+    transition: 0.2s;
+    z-index: 4;
+}
+
+
+/* loader is placed at the middle of the page
+ * to use it, when user clicks button, do .loader.show()
+ */
+.loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #3498db;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    animation: spin 2s linear infinite;
+    display: none;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg) }
+}
+
+/* .box-link {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    box-shadow: 0px 0px 5px 1px grey;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 100px;
+} */
+
+/* buttons */
+.btn-blue {
+    color: #fff;
+    background-color: #337ab7;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    width: 120px;
+    height: 50px;
+    border: 1px solid #337ab7;
+    border-radius: 5px;
+}
+.btn-green {
+    color: #fff;
+    background-color: #5cb65c;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    width: 120px;
+    height: 50px;
+    border: 1px solid #5cb65c;
+    border-radius: 5px;
+}
+.btn-red {
+    color: #fff;
+    background-color: #e60000;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    width: 120px;
+    height: 50px;
+    border: 1px solid #e60000;
+    border-radius: 5px;
+}
+.btn-orange {
+    color: #fff;
+    background-color: #ec971f;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    width: 120px;
+    height: 50px;
+    border: 1px solid #ec971f;
+    border-radius: 5px;
+}
+.btn-purple {
+    color: #fff;
+    background-color: #ca00ca;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    width: 120px;
+    height: 50px;
+    border: 1px solid #ca00ca;
+    border-radius: 5px;
+}
+.btn-trans {
+    color: #000;
+    background-color: transparent;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    width: 400px;
+    height: 50px;
+    border-radius: 25px;
+}
+
+
+/* form fields */
+fieldset {
+    border: 2px solid #777;
+    border-radius: 5px;
+    padding-top: 20px;
+}
+label {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/*input:focus {
+    border-color: #3333ee;
+}*/
+.input-line {
+    border-style: none none solid none;
+    border-width: 2px;
+    border-color: #333;
+    width: 400px;
+    height: 30px;
+    font-size: 15px;
+}
+.input-box {
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: #333;
+    border-style: solid solid solid solid;
+    width: 400px;
+    height: 60px;
+    font-size: 20px;
+}
+.textarea-box {
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: #333;
+    border-style: solid solid solid solid;
+    font-size: 20px;
+}
+
+.background-img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0.5;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+
+
+
+
+
+/*==========================================================================================================================================*/
+
+
+
+
+
+@media all and (max-width: 780px) {
+
+    body, html{
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        background: transparent;
+        font-size: 16px;
+    }
+
+    .col-1  {
+        text-align: center;
+        width : 8.333333%;
+    }
+    .col-2  {
+        text-align: center;
+        width : 16.66666%;
+    }
+    .col-3  {
+        text-align: center;
+        width : 25%;
+    }
+    .col-4  {
+        text-align: center;
+        width : 33.33333%;
+    }
+    .col-5  {
+        text-align: center;
+        width : 41.66666%;
+    }
+    .col-6  {
+        text-align: center;
+        width : 50%;
+    }
+    .col-7  {
+        text-align: center;
+        width : 58.33333%;
+    }
+    .col-8  {
+        text-align: center;
+        width : 66.66666%;
+    }
+    .col-9  {
+        text-align: center;
+        width : 75%;
+    }
+    .col-10 {
+        text-align: center;
+        width : 83.33333%;
+    }
+    .col-11 {
+        text-align: center;
+        width : 91.66666%;
+    }
+    .col-12 {
+        text-align: center;
+        width : 100%;
+    }
+    .input-line {
+        border-style: none none solid none;
+        border-width: 2px;
+        border-color: #333;
+        width: 400px;
+        height: 30px;
+        font-size: 15px;
+    }
+    .input-box {
+        border-radius: 5px;
+        border-width: 2px;
+        border-color: #333;
+        border-style: solid solid solid solid;
+        width: 400px;
+        height: 60px;
+        font-size: 20px;
+    }
+}
+
+
+
+
+
+
+/*==========================================================================================================================================================*/
+
+
+
+
+
+@media all and (max-width: 600px) {
+    
+    body, html{
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        background: transparent;
+        font-size: 16px;
+    }
+
+    .col-1  {
+        text-align: center;
+        width : 8.333333%;
+    }
+    .col-2  {
+        text-align: center;
+        width : 16.66666%;
+    }
+    .col-3  {
+        text-align: center;
+        width : 25%;
+    }
+    .col-4  {
+        text-align: center;
+        width : 33.33333%;
+    }
+    .col-5  {
+        text-align: center;
+        width : 41.66666%;
+    }
+    .col-6  {
+        text-align: center;
+        width : 50%;
+    }
+    .col-7  {
+        text-align: center;
+        width : 58.33333%;
+    }
+    .col-8  {
+        text-align: center;
+        width : 66.66666%;
+    }
+    .col-9  {
+        text-align: center;
+        width : 75%;
+    }
+    .col-10 {
+        text-align: center;
+        width : 83.33333%;
+    }
+    .col-11 {
+        text-align: center;
+        width : 91.66666%;
+    }
+    .col-12 {
+        text-align: center;
+        width : 100%;
+    }
+    .input-line {
+        border-style: none none solid none;
+        border-width: 2px;
+        border-color: #333;
+        width: 400px;
+        height: 30px;
+        font-size: 15px;
+    }
+    .input-box {
+        border-radius: 5px;
+        border-width: 2px;
+        border-color: #333;
+        border-style: solid solid solid solid;
+        width: 400px;
+        height: 60px;
+        font-size: 20px;
+    }
+}
+
+
+
+
+
+/*=============================================================================================================================================================================*/
+
+
+
+
+
+
+
+@media all and (max-width: 480px){
+
+    body, html{
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        background: transparent;
+        font-size: 16px;
+    }
+
+    .col-1  {
+        text-align: center;
+        width : 8.333333%;
+    }
+    .col-2  {
+        text-align: center;
+        width : 16.66666%;
+    }
+    .col-3  {
+        text-align: center;
+        width : 25%;
+    }
+    .col-4  {
+        text-align: center;
+        width : 33.33333%;
+    }
+    .col-5  {
+        text-align: center;
+        width : 41.66666%;
+    }
+    .col-6  {
+        text-align: center;
+        width : 50%;
+    }
+    .col-7  {
+        text-align: center;
+        width : 58.33333%;
+    }
+    .col-8  {
+        text-align: center;
+        width : 66.66666%;
+    }
+    .col-9  {
+        text-align: center;
+        width : 75%;
+    }
+    .col-10 {
+        text-align: center;
+        width : 83.33333%;
+    }
+    .col-11 {
+        text-align: center;
+        width : 91.66666%;
+    }
+    .col-12 {
+        text-align: center;
+        width : 100%;
+    }
+    .input-line {
+        border-style: none none solid none;
+        border-width: 2px;
+        border-color: #333;
+        width: 250px;
+        height: 30px;
+        font-size: 15px;
+    }
+    .input-box {
+        border-radius: 5px;
+        border-width: 2px;
+        border-color: #333;
+        border-style: solid solid solid solid;
+        width: 200px;
+        height: 60px;
+        font-size: 20px;
+    }
+    .img-row {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+
+
+
+
+
+
+/*=====================================================================================================================================================================================*/
+
+
+
+
+
+
+@media all and (max-width: 360px){
+
+    body, html{
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        background: transparent;
+        font-size: 15px;
+    }
+
+    .col-1  {
+        text-align: center;
+        width : 8.333333%;
+    }
+    .col-2  {
+        text-align: center;
+        width : 16.66666%;
+    }
+    .col-3  {
+        text-align: center;
+        width : 25%;
+    }
+    .col-4  {
+        text-align: center;
+        width : 33.33333%;
+    }
+    .col-5  {
+        text-align: center;
+        width : 41.66666%;
+    }
+    .col-6  {
+        text-align: center;
+        width : 50%;
+    }
+    .col-7  {
+        text-align: center;
+        width : 58.33333%;
+    }
+    .col-8  {
+        text-align: center;
+        width : 66.66666%;
+    }
+    .col-9  {
+        text-align: center;
+        width : 75%;
+    }
+    .col-10 {
+        text-align: center;
+        width : 83.33333%;
+    }
+    .col-11 {
+        text-align: center;
+        width : 91.66666%;
+    }
+    .col-12 {
+        text-align: center;
+        width : 100%;
+    }
+    .input-line {
+        border-style: none none solid none;
+        border-width: 2px;
+        border-color: #333;
+        width: 300px;
+        height: 30px;
+        font-size: 15px;
+    }
+    .input-box {
+        border-radius: 5px;
+        border-width: 2px;
+        border-color: #333;
+        border-style: solid solid solid solid;
+        width: 200px;
+        height: 60px;
+        font-size: 20px;
+    }
+}
+
+/* @keyframes colorchange {
+    from {width: 0px; height: 30px;}
+    to {width: 100px; height: 100px;}
+}
+@-webkit-keyframes colorchange {
+    from {width: 0px; height: 30px;}
+    to {width: 100px; height: 100px;}
+} */
